@@ -18,6 +18,7 @@
             platforms = new List<Platform>();
             time = 0;
             gaming = false;
+            winner = String.Empty;
         }
     }
 }
