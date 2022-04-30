@@ -7,6 +7,8 @@ namespace client_draw
         public Form1()
         {
             InitializeComponent();
+            dir = new Dir();
+            game = new Game();
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -165,7 +167,11 @@ namespace client_draw
 
             g.DrawImage(ResourceImages.background, 0, 0, pictureBoxCanvas.Width, pictureBoxCanvas.Height);
 
-            if (!game.gaming)
+            if (game.gaming)
+            {
+                labelTime.Text = (game.time / 1000.0f).ToString();
+            }
+            else
             {
                 if (game.time >= 10)
                 {
@@ -183,6 +189,7 @@ namespace client_draw
 
             foreach (Player player in game.players)
             {
+                if (player.isMe) labelHeart.Text = player.heart.ToString();
                 g.FillRectangle(player.isMe ? Brushes.MediumTurquoise : Brushes.OrangeRed, player.rect.x, player.rect.y, player.rect.w, player.rect.h);
             }
 

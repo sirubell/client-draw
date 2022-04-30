@@ -33,7 +33,10 @@ namespace client_draw
             this.btnConnect = new System.Windows.Forms.Button();
             this.pictureBoxCanvas = new System.Windows.Forms.PictureBox();
             this.textBoxServerIP = new System.Windows.Forms.TextBox();
-            this.labelInfo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelTime = new System.Windows.Forms.Label();
+            this.labelHeart = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCanvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,21 +69,49 @@ namespace client_draw
             this.textBoxServerIP.TabIndex = 2;
             this.textBoxServerIP.Text = "127.0.0.1";
             // 
-            // labelInfo
+            // label1
             // 
-            this.labelInfo.AutoSize = true;
-            this.labelInfo.Location = new System.Drawing.Point(618, 109);
-            this.labelInfo.Name = "labelInfo";
-            this.labelInfo.Size = new System.Drawing.Size(49, 30);
-            this.labelInfo.TabIndex = 3;
-            this.labelInfo.Text = "123";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(618, 109);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 30);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Time: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(618, 139);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 30);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "HP: ";
+            // 
+            // labelTime
+            // 
+            this.labelTime.AutoSize = true;
+            this.labelTime.Location = new System.Drawing.Point(688, 109);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(0, 30);
+            this.labelTime.TabIndex = 5;
+            // 
+            // labelHeart
+            // 
+            this.labelHeart.AutoSize = true;
+            this.labelHeart.Location = new System.Drawing.Point(688, 139);
+            this.labelHeart.Name = "labelHeart";
+            this.labelHeart.Size = new System.Drawing.Size(0, 30);
+            this.labelHeart.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 924);
-            this.Controls.Add(this.labelInfo);
+            this.Controls.Add(this.labelHeart);
+            this.Controls.Add(this.labelTime);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxServerIP);
             this.Controls.Add(this.pictureBoxCanvas);
             this.Controls.Add(this.btnConnect);
@@ -104,9 +135,12 @@ namespace client_draw
         private Button btnConnect;
         private PictureBox pictureBoxCanvas;
         private TextBox textBoxServerIP;
-        private Label labelInfo;
+        private Label label1;
         private TcpClient client;
         private Dir dir;
         private Game game;
+        private Label label2;
+        private Label labelTime;
+        private Label labelHeart;
     }
 }
