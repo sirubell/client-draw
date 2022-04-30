@@ -7,6 +7,8 @@
         public List<Player> players;
         public List<Platform> platforms;
         public int time;
+        public bool gaming;
+        public string winner;
 
         public Game()
         {
@@ -15,6 +17,7 @@
             players = new List<Player>();
             platforms = new List<Platform>();
             time = 0;
+            gaming = false;
         }
     }
 }
