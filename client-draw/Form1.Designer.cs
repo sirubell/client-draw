@@ -34,9 +34,7 @@ namespace client_draw
             this.pictureBoxCanvas = new System.Windows.Forms.PictureBox();
             this.textBoxServerIP = new System.Windows.Forms.TextBox();
             this.labelInfo = new System.Windows.Forms.Label();
-            this.pictureBoxTest = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCanvas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTest)).BeginInit();
             this.SuspendLayout();
             // 
             // btnConnect
@@ -77,20 +75,11 @@ namespace client_draw
             this.labelInfo.TabIndex = 3;
             this.labelInfo.Text = "123";
             // 
-            // pictureBoxTest
-            // 
-            this.pictureBoxTest.Location = new System.Drawing.Point(664, 246);
-            this.pictureBoxTest.Name = "pictureBoxTest";
-            this.pictureBoxTest.Size = new System.Drawing.Size(100, 50);
-            this.pictureBoxTest.TabIndex = 4;
-            this.pictureBoxTest.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 924);
-            this.Controls.Add(this.pictureBoxTest);
             this.Controls.Add(this.labelInfo);
             this.Controls.Add(this.textBoxServerIP);
             this.Controls.Add(this.pictureBoxCanvas);
@@ -105,12 +94,9 @@ namespace client_draw
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCanvas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTest)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
-            this.dir = new Dir();
-            this.game = new Game();
         }
 
         #endregion
@@ -122,6 +108,5 @@ namespace client_draw
         private TcpClient client;
         private Dir dir;
         private Game game;
-        private PictureBox pictureBoxTest;
     }
 }
