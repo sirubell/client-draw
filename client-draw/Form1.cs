@@ -190,7 +190,7 @@ namespace client_draw
                 {
                     labelHeart.Text = player.heart.ToString();
                     if (game.gaming)
-                        playername.Text = "Your name: " + player.name;
+                        playername.Text = "Your NO: " + player.name;
                 }
                 g.FillRectangle(player.isMe ? Brushes.MediumTurquoise : Brushes.OrangeRed, player.rect.x, player.rect.y, player.rect.w, player.rect.h);
             }

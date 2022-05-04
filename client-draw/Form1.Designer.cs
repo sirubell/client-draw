@@ -82,7 +82,7 @@ namespace client_draw
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(618, 169);
+            this.label2.Location = new System.Drawing.Point(618, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 30);
             this.label2.TabIndex = 4;
@@ -107,7 +107,7 @@ namespace client_draw
             // playername
             // 
             this.playername.AutoSize = true;
-            this.playername.Location = new System.Drawing.Point(618, 139);
+            this.playername.Location = new System.Drawing.Point(618, 169);
             this.playername.Name = "playername";
             this.playername.Size = new System.Drawing.Size(127, 30);
             this.playername.TabIndex = 7;
