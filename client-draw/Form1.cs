@@ -66,13 +66,9 @@ namespace client_draw
                     t.IsBackground = true;
                     t.Start();
                 }
-                
-            }
-            else
-            {
-
             }
         }
+
         bool Connect(string serverIP, Int32 port)
         {
             try
@@ -173,6 +169,7 @@ namespace client_draw
             }
             else
             {
+                playername.Text = "Winner: " + game.winner;
                 if (game.time >= 10)
                 {
                     Bitmap image1 = GetImage(game.time / 10);
@@ -189,7 +186,12 @@ namespace client_draw
 
             foreach (Player player in game.players)
             {
-                if (player.isMe) labelHeart.Text = player.heart.ToString();
+                if (player.isMe)
+                {
+                    labelHeart.Text = player.heart.ToString();
+                    if (game.gaming)
+                        playername.Text = "Your name: " + player.name;
+                }
                 g.FillRectangle(player.isMe ? Brushes.MediumTurquoise : Brushes.OrangeRed, player.rect.x, player.rect.y, player.rect.w, player.rect.h);
             }
 

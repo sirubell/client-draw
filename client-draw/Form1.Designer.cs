@@ -37,6 +37,7 @@ namespace client_draw
             this.label2 = new System.Windows.Forms.Label();
             this.labelTime = new System.Windows.Forms.Label();
             this.labelHeart = new System.Windows.Forms.Label();
+            this.playername = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCanvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +82,7 @@ namespace client_draw
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(618, 139);
+            this.label2.Location = new System.Drawing.Point(618, 169);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 30);
             this.label2.TabIndex = 4;
@@ -103,11 +104,21 @@ namespace client_draw
             this.labelHeart.Size = new System.Drawing.Size(0, 30);
             this.labelHeart.TabIndex = 6;
             // 
+            // playername
+            // 
+            this.playername.AutoSize = true;
+            this.playername.Location = new System.Drawing.Point(618, 139);
+            this.playername.Name = "playername";
+            this.playername.Size = new System.Drawing.Size(127, 30);
+            this.playername.TabIndex = 7;
+            this.playername.Text = "playername";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 924);
+            this.Controls.Add(this.playername);
             this.Controls.Add(this.labelHeart);
             this.Controls.Add(this.labelTime);
             this.Controls.Add(this.label2);
@@ -142,5 +153,6 @@ namespace client_draw
         private Label label2;
         private Label labelTime;
         private Label labelHeart;
+        private Label playername;
     }
 }
